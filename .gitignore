@@ -1,0 +1,17 @@
+# Environment files with secrets
+.env
+.env.local
+.env.*.local
+
+# Node modules (if any local plugins)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.idea/
+.vscode/
+*.swp
+*.swo

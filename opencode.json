@@ -1,0 +1,1129 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "keybinds": {
+    "scrollbar_toggle": "<leader>o"
+  },
+  "plugin": [
+    "oh-my-opencode@2.5.4",
+    "opencode-google-antigravity-auth",
+    "opencode-openai-codex-auth@4.2.0",
+    "@franlol/opencode-md-table-formatter@0.0.3"
+  ],
+  "mcp": {
+    "morph-mcp": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@morphllm/morphmcp"
+      ],
+      "enabled": true,
+      "environment": {
+        "MORPH_API_KEY": "${MORPH_API_KEY}"
+      }
+    },
+    "wizlight": {
+      "type": "local",
+      "command": [
+        "uv",
+        "run",
+        "--directory",
+        "/Users/safzan/wizlight-mcp",
+        "python",
+        "-m",
+        "wizlight_mcp.main"
+      ],
+      "enabled": false,
+      "environment": {}
+    },
+    "context7": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "enabled": true,
+      "environment": {}
+    },
+    "exa": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "exa",
+        "--config",
+        "{\"apiKey\":\"${EXA_API_KEY}\"}"
+      ],
+      "enabled": true
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "enabled": false
+    },
+    "browsermcp": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@browsermcp/mcp@latest"
+      ],
+      "enabled": true
+    }
+  },
+  "provider": {
+    "google": {
+      "npm": "@ai-sdk/google",
+      "models": {
+        "gemini-3-pro-preview": {
+          "id": "gemini-3-pro-preview",
+          "name": "Gemini 3 Pro Preview",
+          "release_date": "2025-11-18",
+          "reasoning": true,
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 2,
+            "output": 12,
+            "cache_read": 0.2
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video",
+              "audio",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-3-pro-high": {
+          "id": "gemini-3-pro-preview",
+          "name": "Gemini 3 Pro Preview (High Thinking)",
+          "options": {
+            "thinkingConfig": {
+              "thinkingLevel": "high",
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-3-pro-medium": {
+          "id": "gemini-3-pro-preview",
+          "name": "Gemini 3 Pro Preview (Medium Thinking)",
+          "options": {
+            "thinkingConfig": {
+              "thinkingLevel": "medium",
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-3-pro-low": {
+          "id": "gemini-3-pro-preview",
+          "name": "Gemini 3 Pro Preview (Low Thinking)",
+          "options": {
+            "thinkingConfig": {
+              "thinkingLevel": "low",
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-3-flash": {
+          "id": "gemini-3-flash",
+          "name": "Gemini 3 Flash",
+          "release_date": "2025-12-17",
+          "reasoning": true,
+          "limit": {
+            "context": 1048576,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0.5,
+            "output": 3,
+            "cache_read": 0.05
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video",
+              "audio",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-3-flash-high": {
+          "id": "gemini-3-flash",
+          "name": "Gemini 3 Flash (High Thinking)",
+          "options": {
+            "thinkingConfig": {
+              "thinkingLevel": "high",
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-3-flash-medium": {
+          "id": "gemini-3-flash",
+          "name": "Gemini 3 Flash (Medium Thinking)",
+          "options": {
+            "thinkingConfig": {
+              "thinkingLevel": "medium",
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-3-flash-low": {
+          "id": "gemini-3-flash",
+          "name": "Gemini 3 Flash (Low Thinking)",
+          "options": {
+            "thinkingConfig": {
+              "thinkingLevel": "low",
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-2.5-flash": {
+          "id": "gemini-2.5-flash",
+          "name": "Gemini 2.5 Flash",
+          "release_date": "2025-03-20",
+          "reasoning": true,
+          "limit": {
+            "context": 1048576,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0.3,
+            "output": 2.5,
+            "cache_read": 0.075
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "audio",
+              "video",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-2.5-flash-lite": {
+          "id": "gemini-2.5-flash-lite",
+          "name": "Gemini 2.5 Flash Lite",
+          "release_date": "2025-06-17",
+          "reasoning": true,
+          "limit": {
+            "context": 1048576,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0.1,
+            "output": 0.4,
+            "cache_read": 0.025
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "audio",
+              "video",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-claude-sonnet-4-5-thinking-high": {
+          "id": "gemini-claude-sonnet-4-5-thinking",
+          "name": "Claude Sonnet 4.5 (High Thinking)",
+          "release_date": "2025-11-18",
+          "reasoning": true,
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinkingConfig": {
+              "thinkingBudget": 32000,
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-claude-sonnet-4-5-thinking-medium": {
+          "id": "gemini-claude-sonnet-4-5-thinking",
+          "name": "Claude Sonnet 4.5 (Medium Thinking)",
+          "release_date": "2025-11-18",
+          "reasoning": true,
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinkingConfig": {
+              "thinkingBudget": 16000,
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-claude-sonnet-4-5-thinking-low": {
+          "id": "gemini-claude-sonnet-4-5-thinking",
+          "name": "Claude Sonnet 4.5 (Low Thinking)",
+          "release_date": "2025-11-18",
+          "reasoning": true,
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinkingConfig": {
+              "thinkingBudget": 4000,
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-claude-opus-4-5-thinking-high": {
+          "id": "gemini-claude-opus-4-5-thinking",
+          "name": "Claude Opus 4.5 (High Thinking)",
+          "release_date": "2025-11-24",
+          "reasoning": true,
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 5,
+            "output": 25,
+            "cache_read": 0.5
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinkingConfig": {
+              "thinkingBudget": 32000,
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-claude-opus-4-5-thinking-medium": {
+          "id": "gemini-claude-opus-4-5-thinking",
+          "name": "Claude Opus 4.5 (Medium Thinking)",
+          "release_date": "2025-11-24",
+          "reasoning": true,
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 5,
+            "output": 25,
+            "cache_read": 0.5
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinkingConfig": {
+              "thinkingBudget": 16000,
+              "includeThoughts": true
+            }
+          }
+        },
+        "gemini-claude-opus-4-5-thinking-low": {
+          "id": "gemini-claude-opus-4-5-thinking",
+          "name": "Claude Opus 4.5 (Low Thinking)",
+          "release_date": "2025-11-24",
+          "reasoning": true,
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 5,
+            "output": 25,
+            "cache_read": 0.5
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinkingConfig": {
+              "thinkingBudget": 4000,
+              "includeThoughts": true
+            }
+          }
+        }
+      }
+    },
+    "openai": {
+      "name": "OpenAI",
+      "api": "codex",
+      "models": {
+        "gpt-5.2": {
+          "name": "GPT-5.2"
+        },
+        "o3": {
+          "name": "o3",
+          "thinking": true
+        },
+        "o4-mini": {
+          "name": "o4-mini",
+          "thinking": true
+        },
+        "codex-1": {
+          "name": "Codex-1"
+        },
+        "gpt-5.2-none": {
+          "name": "GPT 5.2 None (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "none",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.2-low": {
+          "name": "GPT 5.2 Low (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "low",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.2-medium": {
+          "name": "GPT 5.2 Medium (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "medium",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.2-high": {
+          "name": "GPT 5.2 High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "high",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.2-xhigh": {
+          "name": "GPT 5.2 Extra High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "xhigh",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.2-codex-low": {
+          "name": "GPT 5.2 Codex Low (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "low",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.2-codex-medium": {
+          "name": "GPT 5.2 Codex Medium (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "medium",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.2-codex-high": {
+          "name": "GPT 5.2 Codex High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "high",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.2-codex-xhigh": {
+          "name": "GPT 5.2 Codex Extra High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "xhigh",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-max-low": {
+          "name": "GPT 5.1 Codex Max Low (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "low",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-max-medium": {
+          "name": "GPT 5.1 Codex Max Medium (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "medium",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-max-high": {
+          "name": "GPT 5.1 Codex Max High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "high",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-max-xhigh": {
+          "name": "GPT 5.1 Codex Max Extra High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "xhigh",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-low": {
+          "name": "GPT 5.1 Codex Low (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "low",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-medium": {
+          "name": "GPT 5.1 Codex Medium (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "medium",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-high": {
+          "name": "GPT 5.1 Codex High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "high",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-mini-medium": {
+          "name": "GPT 5.1 Codex Mini Medium (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "medium",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-codex-mini-high": {
+          "name": "GPT 5.1 Codex Mini High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "high",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-none": {
+          "name": "GPT 5.1 None (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "none",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-low": {
+          "name": "GPT 5.1 Low (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "low",
+            "reasoningSummary": "auto",
+            "textVerbosity": "low",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-medium": {
+          "name": "GPT 5.1 Medium (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "medium",
+            "reasoningSummary": "auto",
+            "textVerbosity": "medium",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        },
+        "gpt-5.1-high": {
+          "name": "GPT 5.1 High (OAuth)",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "options": {
+            "reasoningEffort": "high",
+            "reasoningSummary": "detailed",
+            "textVerbosity": "high",
+            "include": ["reasoning.encrypted_content"],
+            "store": false
+          }
+        }
+      }
+    },
+    "vibeproxy-anthropic": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "VibeProxy (Anthropic)",
+      "options": {
+        "baseURL": "http://localhost:8317/v1",
+        "apiKey": "sk-ant-dummy-key-for-proxy-usage"
+      },
+      "models": {
+        "gemini-claude-sonnet-4-5": {
+          "id": "gemini-claude-sonnet-4-5",
+          "name": "Gemini Claude Sonnet 4.5",
+          "limit": {
+            "context": 190000,
+            "output": 8192
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-claude-sonnet-4-5-thinking": {
+          "id": "gemini-claude-sonnet-4-5-thinking",
+          "name": "Gemini Claude Sonnet 4.5 Thinking",
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "reasoning": true,
+          "options": {
+            "reasoningEffort": "high"
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-claude-opus-4-5-thinking": {
+          "id": "gemini-claude-opus-4-5-thinking",
+          "name": "Gemini Claude Opus 4.5 Thinking",
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "reasoning": true,
+          "options": {
+            "reasoningEffort": "high"
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    },
+    "vibeproxy-gemini": {
+      "npm": "@ai-sdk/google",
+      "name": "VibeProxy (Gemini)",
+      "options": {
+        "baseURL": "http://localhost:8317/v1beta",
+        "apiKey": "dummy-google-api-key-for-proxy-usage"
+      },
+      "models": {
+        "gemini-3-pro-image-preview": {
+          "id": "gemini-3-pro-image-preview",
+          "name": "Gemini 3 Pro Image Preview",
+          "limit": {
+            "context": 32000,
+            "output": 8192
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-2.5-computer-use-preview-10-2025": {
+          "id": "gemini-2.5-computer-use-preview-10-2025",
+          "name": "Gemini 2.5 Computer Use",
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-2.5-flash": {
+          "id": "gemini-2.5-flash",
+          "name": "Gemini 2.5 Flash",
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-3-pro-preview": {
+          "id": "gemini-3-pro-preview",
+          "name": "Gemini 3 Pro Preview",
+          "limit": {
+            "context": 1000000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gpt-oss-120b-medium": {
+          "id": "gpt-oss-120b-medium",
+          "name": "GPT OSS 120B Medium",
+          "limit": {
+            "context": 128000,
+            "output": 4096
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-2.5-flash-lite": {
+          "id": "gemini-2.5-flash-lite",
+          "name": "Gemini 2.5 Flash Lite",
+          "limit": {
+            "context": 1000000,
+            "output": 8192
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-2.5-pro": {
+          "id": "gemini-2.5-pro",
+          "name": "Gemini 2.5 Pro",
+          "limit": {
+            "context": 1000000,
+            "output": 8192
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gemini-3-flash": {
+          "id": "gemini-3-flash",
+          "name": "Gemini 3 Flash",
+          "limit": {
+            "context": 1000000,
+            "output": 8192
+          },
+          "modalities": {
+            "input": [
+              "image",
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    },
+    "fetchs": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Fetchs (zAI)",
+      "options": {
+        "baseURL": "https://fetchs.de5.net/v1",
+        "apiKey": "PublicKey1",
+        "name": "fetchs",
+        "headers": {
+          "HTTP-Referer": "https://opencode.ai",
+          "X-Title": "OpenCode"
+        }
+      },
+      "models": {
+        "claude-opus-4-5-20251101": {
+          "id": "claude-opus-4-5-20251101",
+          "name": "Claude Opus 4.5 (Fetchs)",
+          "limit": {
+            "context": 190000,
+            "output": 16000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "structuredOutputs": false
+          }
+        }
+      }
+    },
+    "openrouter-shortcut": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://openrouter.ai/api/v1"
+      },
+      "models": {
+        "kimi-k2-0905:nitro": {
+          "id": "moonshotai/kimi-k2-0905:nitro",
+          "name": "Kimi K2 Nitro",
+          "attachment": false,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 8192
+          }
+        }
+      }
+    }
+  }
+}
