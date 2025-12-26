@@ -133,6 +133,35 @@ brew install --cask codexbar
 | `wizlight` | Smart home lights | Disabled |
 | `chrome-devtools` | Chrome DevTools | Disabled |
 
+### Bring Your Own Keys (BYOK)
+
+**Both Morph and Exa require your own API keys.** Replace the placeholders in `opencode.json`:
+
+```bash
+# In opencode.json, replace:
+# ${MORPH_API_KEY} → your Morph API key
+# ${EXA_API_KEY} → your Exa API key
+```
+
+#### Morph MCP
+
+[Morph](https://morphllm.com) provides fast codebase reading and editing tools:
+
+- **`warpgrep_codebase_search`** - Sends a swarm of subagents that read your codebase in parallel, extremely fast for large repos
+- **`edit_file`** - Fast file editing without reading entire files into context
+
+This MCP helps avoid repeated file reads and writes, which can save money/usage if you're paying for API calls. However, **the MCP itself is still somewhat expensive** - factor this into your costs.
+
+Get your key at: https://morphllm.com
+
+#### Exa MCP
+
+[Exa](https://exa.ai) is an excellent search tool. Oh-My-OpenCode includes a built-in Exa integration, but I use my own MCP with a **paid API key** to avoid hitting rate limits on the free tier.
+
+If you don't need heavy search usage, you can disable this MCP and rely on the built-in Oh-My-OpenCode Exa tool instead.
+
+Get your key at: https://exa.ai
+
 ## Plugins
 
 - `oh-my-opencode@2.5.4` - Enhanced agent system
