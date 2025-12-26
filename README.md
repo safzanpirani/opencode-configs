@@ -52,6 +52,30 @@ That's it. No proxy required.
 
 ---
 
+### OpenAI Codex Authentication
+
+Use [opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-codex-auth) to leverage your **ChatGPT Plus/Pro subscription** and access Codex models inside OpenCode.
+
+1. Add to your `opencode.json` plugins:
+   ```json
+   {
+     "plugin": [
+       "opencode-openai-codex-auth"
+     ]
+   }
+   ```
+
+2. Add the custom model definitions from the plugin repo to your `opencode.json`. See the [opencode-openai-codex-auth README](https://github.com/numman-ali/opencode-openai-codex-auth#usage) for the full provider/model config to copy.
+
+3. Authenticate:
+   ```bash
+   opencode auth login
+   ```
+
+This gives you access to GPT-5.x, o3, o4-mini, Codex-1 and other OpenAI models using your existing ChatGPT subscription.
+
+---
+
 ### Option 2: Local Proxy Setup (Advanced)
 
 For more control, you can run a local API proxy on `localhost:8317` to route requests through Google's Antigravity/Gemini infrastructure. This enables access to Claude models via Gemini's API.
