@@ -41,7 +41,9 @@ Use [opencode-google-antigravity-auth](https://github.com/shekohex/opencode-goog
    }
    ```
 
-2. Authenticate:
+2. Add the custom model definitions from the plugin repo to your `opencode.json`. See the [opencode-google-antigravity-auth README](https://github.com/shekohex/opencode-google-antigravity-auth#usage) for the full provider/model config to copy.
+
+3. Authenticate:
    ```bash
    opencode auth login
    ```
