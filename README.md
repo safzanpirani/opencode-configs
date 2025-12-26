@@ -47,6 +47,7 @@ Use [opencode-google-antigravity-auth](https://github.com/shekohex/opencode-goog
    ```bash
    opencode auth login
    ```
+   Then select **Google** when prompted for the provider.
 
 That's it. No proxy required.
 
@@ -71,6 +72,7 @@ Use [opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-c
    ```bash
    opencode auth login
    ```
+   Then select **OpenAI** when prompted for the provider.
 
 This gives you access to GPT-5.x, o3, o4-mini, Codex-1 and other OpenAI models using your existing ChatGPT subscription.
 
