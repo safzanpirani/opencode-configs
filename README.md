@@ -121,7 +121,6 @@ brew install --cask codexbar
 | `openai` | OpenAI Codex API | Codex Auth plugin |
 | `vibeproxy-anthropic` | Claude via local proxy | Dummy key (proxy handles auth) |
 | `vibeproxy-gemini` | Gemini via local proxy | Dummy key (proxy handles auth) |
-| `fetchs` | Free tier access (zAI) | Public key |
 | `openrouter-shortcut` | OpenRouter models | Requires `OPENROUTER_API_KEY` |
 
 ## MCP Servers
@@ -131,8 +130,6 @@ brew install --cask codexbar
 | `morph-mcp` | Morph LLM editing tools | Enabled |
 | `context7` | Context7 documentation lookup | Enabled |
 | `exa` | Exa web search | Enabled |
-| `browsermcp` | Browser automation | Enabled |
-| `wizlight` | Smart home lights | Disabled |
 | `chrome-devtools` | Chrome DevTools | Disabled |
 
 ### Bring Your Own Keys (BYOK)

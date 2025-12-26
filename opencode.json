@@ -22,20 +22,7 @@
         "MORPH_API_KEY": "${MORPH_API_KEY}"
       }
     },
-    "wizlight": {
-      "type": "local",
-      "command": [
-        "uv",
-        "run",
-        "--directory",
-        "/Users/safzan/wizlight-mcp",
-        "python",
-        "-m",
-        "wizlight_mcp.main"
-      ],
-      "enabled": false,
-      "environment": {}
-    },
+
     "context7": {
       "type": "local",
       "command": [
@@ -67,14 +54,6 @@
         "chrome-devtools-mcp@latest"
       ],
       "enabled": false
-    },
-    "browsermcp": {
-      "type": "local",
-      "command": [
-        "npx",
-        "@browsermcp/mcp@latest"
-      ],
-      "enabled": true
     }
   },
   "provider": {
@@ -1070,41 +1049,7 @@
         }
       }
     },
-    "fetchs": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Fetchs (zAI)",
-      "options": {
-        "baseURL": "https://fetchs.de5.net/v1",
-        "apiKey": "PublicKey1",
-        "name": "fetchs",
-        "headers": {
-          "HTTP-Referer": "https://opencode.ai",
-          "X-Title": "OpenCode"
-        }
-      },
-      "models": {
-        "claude-opus-4-5-20251101": {
-          "id": "claude-opus-4-5-20251101",
-          "name": "Claude Opus 4.5 (Fetchs)",
-          "limit": {
-            "context": 190000,
-            "output": 16000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "structuredOutputs": false
-          }
-        }
-      }
-    },
+
     "openrouter-shortcut": {
       "npm": "@ai-sdk/openai-compatible",
       "options": {
