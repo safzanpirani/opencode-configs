@@ -21,7 +21,7 @@
       "model": "vibeproxy-gemini/gemini-3-pro-preview"
     },
     "multimodal-looker": {
-      "model": "vibeproxy-gemini/gemini-2.5-flash"
+      "model": "google/gemini-3-flash"
     }
   },
   "disabled_agents": ["frontend-ui-ux-engineer"],
