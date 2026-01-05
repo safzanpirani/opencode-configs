@@ -85,6 +85,24 @@
             "output": [
               "text"
             ]
+          },
+          "variants": {
+            "low": {
+              "options": {
+                "thinkingConfig": {
+                  "thinkingLevel": "low",
+                  "includeThoughts": true
+                }
+              }
+            },
+            "high": {
+              "options": {
+                "thinkingConfig": {
+                  "thinkingLevel": "high",
+                  "includeThoughts": true
+                }
+              }
+            }
           }
         },
         "gemini-3-pro-high": {
@@ -142,6 +160,40 @@
             "output": [
               "text"
             ]
+          },
+          "variants": {
+            "minimal": {
+              "options": {
+                "thinkingConfig": {
+                  "thinkingLevel": "minimal",
+                  "includeThoughts": true
+                }
+              }
+            },
+            "low": {
+              "options": {
+                "thinkingConfig": {
+                  "thinkingLevel": "low",
+                  "includeThoughts": true
+                }
+              }
+            },
+            "medium": {
+              "options": {
+                "thinkingConfig": {
+                  "thinkingLevel": "medium",
+                  "includeThoughts": true
+                }
+              }
+            },
+            "high": {
+              "options": {
+                "thinkingConfig": {
+                  "thinkingLevel": "high",
+                  "includeThoughts": true
+                }
+              }
+            }
           }
         },
         "gemini-3-flash-high": {
@@ -413,6 +465,96 @@
               "includeThoughts": true
             }
           }
+        },
+        "gemini-claude-opus-4-5-thinking": {
+          "id": "gemini-claude-opus-4-5-thinking",
+          "name": "Claude Opus 4.5",
+          "release_date": "2025-11-24",
+          "reasoning": true,
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 5,
+            "output": 25,
+            "cache_read": 0.5
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "thinking": {
+                "enabled": true,
+                "budgetTokens": 4000
+              }
+            },
+            "medium": {
+              "thinking": {
+                "enabled": true,
+                "budgetTokens": 16000
+              }
+            },
+            "high": {
+              "thinking": {
+                "enabled": true,
+                "budgetTokens": 32000
+              }
+            }
+          }
+        },
+        "gemini-claude-sonnet-4-5-thinking": {
+          "id": "gemini-claude-sonnet-4-5-thinking",
+          "name": "Claude Sonnet 4.5",
+          "release_date": "2025-11-18",
+          "reasoning": true,
+          "limit": {
+            "context": 190000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "thinking": {
+                "enabled": true,
+                "budgetTokens": 4000
+              }
+            },
+            "medium": {
+              "thinking": {
+                "enabled": true,
+                "budgetTokens": 16000
+              }
+            },
+            "high": {
+              "thinking": {
+                "enabled": true,
+                "budgetTokens": 32000
+              }
+            }
+          }
         }
       }
     },
@@ -421,7 +563,60 @@
       "api": "codex",
       "models": {
         "gpt-5.2": {
-          "name": "GPT-5.2"
+          "name": "GPT-5.2",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "variants": {
+            "none": {
+              "reasoningEffort": "none"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            }
+          }
+        },
+        "gpt-5.2-codex": {
+          "name": "GPT-5.2 Codex",
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "variants": {
+            "none": {
+              "reasoningEffort": "none"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            }
+          }
         },
         "o3": {
           "name": "o3",
