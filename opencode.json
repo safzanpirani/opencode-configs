@@ -286,7 +286,7 @@
           "release_date": "2025-11-18",
           "reasoning": true,
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "cost": {
@@ -317,7 +317,7 @@
           "release_date": "2025-11-18",
           "reasoning": true,
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "cost": {
@@ -348,7 +348,7 @@
           "release_date": "2025-11-18",
           "reasoning": true,
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "cost": {
@@ -379,7 +379,7 @@
           "release_date": "2025-11-24",
           "reasoning": true,
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "cost": {
@@ -410,7 +410,7 @@
           "release_date": "2025-11-24",
           "reasoning": true,
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "cost": {
@@ -441,7 +441,7 @@
           "release_date": "2025-11-24",
           "reasoning": true,
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "cost": {
@@ -472,7 +472,7 @@
           "release_date": "2025-11-24",
           "reasoning": true,
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "cost": {
@@ -517,7 +517,7 @@
           "release_date": "2025-11-18",
           "reasoning": true,
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "cost": {
@@ -1039,7 +1039,7 @@
           "id": "gemini-claude-sonnet-4-5",
           "name": "Gemini Claude Sonnet 4.5",
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 8192
           },
           "modalities": {
@@ -1056,7 +1056,7 @@
           "id": "gemini-claude-sonnet-4-5-thinking",
           "name": "Gemini Claude Sonnet 4.5 Thinking",
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "reasoning": true,
@@ -1077,7 +1077,7 @@
           "id": "gemini-claude-opus-4-5-thinking",
           "name": "Gemini Claude Opus 4.5 Thinking",
           "limit": {
-            "context": 190000,
+            "context": 200000,
             "output": 64000
           },
           "reasoning": true,
